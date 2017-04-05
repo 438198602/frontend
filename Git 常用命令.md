@@ -1,0 +1,110 @@
+## 一、fork的项目
+
+### 1、克隆
+
+`git clone [fork用户的sshURL]`
+
+### 2、设置线上主分支为upstream
+
+`git remote add upstream [被fork用户的sshURL]`
+
+### 3、检查分支
+
+`git remote -v`
+
+如果输出的是：
+```
+orgin：为本地分支的
+upstream：为远程分支
+```
+表明主分支设置成功
+
+## 二、自己本地的项目
+
+### 查看用户信息
+
+`git config --list`
+
+1、`git config --global user.name "438198602"`
+
+2、`git config --global user.email "438198602@qq.com"`
+
+3、`git init`
+
+4、`git add ./`
+
+5、`git commit -m "改动注释"`
+
+6、关联远程仓库
+
+`git remote add origin 需要上传到远程服务器的项目的sshURL`
+
+7、如果上一步报错，试试这个
+
+`git pull 需要上传到远程服务器的项目的HTTPS`
+
+8、将本地的内容同步到远程仓库中
+
+`git push -u origin master`
+
+## 三、git提交更改
+
+1、`git add ./`
+
+2、`git commit -m "改动注释"`
+
+3、将远程分支同步到本地
+
+`git fetch upstream`
+
+4、合并分支
+
+`git merge upstream/master`
+
+如果有冲突，用`git diff`来查看，然后在本地解决冲突文件，之后重复1、2、3、4的步骤。
+
+5、提交
+
+`git push origin`
+
+6、登录github：进入我的最新提交master分支，点击`pull Request`提交到主分支
+
+7、若提示代码无冲突则合并，点击按钮`pull Request`
+
+## 四、其它git命令
+
+### 1、git版本回退
+
+`git reset --hard HEAD^`
+
+HEAD表示当前的版本，HEAD^ 表示上一个版本，上上个版本就是HEAD^^了，以此类推。HEAD~50即回退50个版本。
+
+### 2、gitk（git的图形化工具）
+
+`gitk`
+
+### 3、git 切换分支工作
+
+新建新分支
+
+`git checkout -b 分支名`
+
+相当于
+```
+新建分支
+git branch 分支名
+切换分支
+git checkout 分支名
+```
+
+### 切换回原分支
+
+`git checkout master`
+
+### 合并分支
+
+`git merge 分支名`
+
+### 删除分支
+
+`git branch -d 分支名`

@@ -36,14 +36,6 @@ div {
 <p contenteditable="true">可编辑</p>
 ```
 
-### webkit-playsinline
-
-手机 video 都可以在页面中播放，而不是全屏播放了。
-
-```
-<video id="myvideo" src="test.mp4" webkit-playsinline="true"></video>
-```
-
 ### position: absolute， 让margin有效的
 
 设置left:0, right:0 就可以。原因是两边都是0不存在边距，element就可以得出距离，并居中。
@@ -101,4 +93,12 @@ word-break: break-all;
 {
     box-sizing: border-box;
 }
+```
+
+### webkit-playsinline
+
+手机 video 都可以在页面中播放，而不是全屏播放了。
+
+```
+<video id="myvideo" src="test.mp4" webkit-playsinline="true"></video>
 ```

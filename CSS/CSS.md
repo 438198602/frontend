@@ -1,5 +1,15 @@
 # 一些常见的css样式
 
+### 超链接
+
+```
+a /*所有超链接*/
+a:link /*超链接文字格式*/
+a:visited /*浏览过的链接文字格式*/
+a:active /*按下链接的格式*/
+a:hover /*鼠标转到链接*/
+```
+
 ### ::-webkit-input-placeholder
 
 input 的 H5 placeholder 属性，不能直接改文字颜色，所以目前的解决方法就是用 ::input-placeholder 属性来改。

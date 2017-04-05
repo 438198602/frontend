@@ -73,6 +73,20 @@ div {
 }
 ```
 
+### css实现不换行、自动换行、强制换行
+
+```
+//不换行
+white-space: nowrap;
+
+//自动换行
+word-wrap: break-word;
+word-break: normal;
+
+//强制换行
+word-break: break-all;
+```
+
 ### box-sizing 让元素的宽度、高度包含border和padding
 
 ```

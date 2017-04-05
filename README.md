@@ -1,40 +1,12 @@
 # webs
 
-## 一、Markdown 常用语法
-
-参考链接 <http://www.jianshu.com/p/67cc81003064>
-
-### 链接
+## 一、开发工具
 
 ```
-github <https://github.com/438198602>
+Git
+node
+Beyond Compare  比较工具 <http://www.qdfuns.com/tools>
+Visual Studio Code
+百度网盘
+有道云笔记
 ```
-github <https://github.com/438198602>
-
-### 图片
-
-```
-![头像](https://avatars0.githubusercontent.com/u/2120155?v=3&s=40)
-```
-![头像](https://avatars0.githubusercontent.com/u/2120155?v=3&s=40)
-
-### 强调
-
-```
-**强调**
-```
-**强调**
-
-### 删除线
-
-```
-~~删除线~~
-```
-~~删除线~~
-
-### 引用
-
-```
-> 天才就是99%的努力加上1%的灵感。-爱迪生
-```
-> 天才就是99%的努力加上1%的灵感。-爱迪生

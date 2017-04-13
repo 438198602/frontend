@@ -24,4 +24,4 @@ Visual Studio Code
 
 1、[常见的css样式](https://github.com/438198602/webs/blob/master/%E5%B8%B8%E8%A7%81%E7%9A%84css%E6%A0%B7%E5%BC%8F.md)
 
-2、[HTML head设置](https://github.com/438198602/webs/blob/master/head.md)
+2、[HTML head设置](https://github.com/438198602/webs/blob/master/HTML%20head%20%E8%AE%BE%E7%BD%AE.md)

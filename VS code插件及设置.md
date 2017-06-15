@@ -4,10 +4,7 @@
 Auto Close Tag  // 自动添加HTML / XML关闭标记
 Auto Rename Tag  // 自动重命名配对的HTML / XML标记
 Path Intellisense  // 路径提示
-Git History  // Git历史
 React Native Tools
-vscode-fileheader  //添加文件头部信息，按Ctrl+Alt+i
-filesize  //显示文件的大小
 ```
 
 ### VS code设置
@@ -30,8 +27,6 @@ filesize  //显示文件的大小
     // 启用后，保存文件时在文件末尾插入一个最终新行。
     "files.insertFinalNewline": true,
     // 自动更新扩展
-    "extensions.autoUpdate": true,
-    "fileheader.Author": "438198602",
-    "fileheader.LastModifiedBy": "438198602"
+    "extensions.autoUpdate": true
 }
 ```

@@ -16,17 +16,11 @@ React Native Tools
     "files.autoSave": "onWindowChange",
     // 自动换行
     "editor.wordWrap": "on",
-    // 控制是否显示 minimap
-    "editor.minimap.enabled": true,
     // 指定用在工作台中的图标主题。
     "workbench.iconTheme": "vs-seti",
-    // 控制编辑器是否应呈现缩进参考线
-    "editor.renderIndentGuides": true,
     // 启用后，将在保存文件时剪裁尾随空格。
     "files.trimTrailingWhitespace": true,
     // 启用后，保存文件时在文件末尾插入一个最终新行。
-    "files.insertFinalNewline": true,
-    // 自动更新扩展
-    "extensions.autoUpdate": true
+    "files.insertFinalNewline": true
 }
 ```

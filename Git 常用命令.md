@@ -108,3 +108,11 @@ git checkout 分支名
 ### 删除分支
 
 `git branch -d 分支名`
+
+### 切换分支前储藏当前分支的修改（不add和commit）
+
+`git stash`
+
+### 拉取储藏的修改
+
+`git stash apply`

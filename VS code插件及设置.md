@@ -1,6 +1,7 @@
 ### VS code 插件
 
 ```
+Auto Close Tag  // 自动关闭标签
 Auto Rename Tag  // 自动重命名配对的HTML / XML标记
 Path Intellisense  // 路径提示
 React Native Tools

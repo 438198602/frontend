@@ -5,10 +5,12 @@
 ```
 Git
 node
-Beyond Compare  比较工具 <http://www.qdfuns.com/tools>
 Visual Studio Code
 百度网盘
-有道云笔记
+钉钉
+XX-net    上Google
+Beyond Compare    比较工具
+VMware    可以在Windows安装Mac的虚拟机
 ```
 1、[VS code插件及设置](https://github.com/438198602/webs/blob/master/VS%20code%E6%8F%92%E4%BB%B6%E5%8F%8A%E8%AE%BE%E7%BD%AE.md)
 

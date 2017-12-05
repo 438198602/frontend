@@ -1,5 +1,7 @@
 # ReactNative android 打包签名apk
 
+>## 0.42及以下版本用以下方法打包，0.42以上版本请参考<http://facebook.github.io/react-native/docs/signed-apk-android.html>
+
 ### tips：“/” 表示RN主目录
 
 1、生成签名密钥

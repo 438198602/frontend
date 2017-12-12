@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fetch 请求超时</title>
+</head>
+<body>
+
+    <script>
+        function _fetch(url, timeout = 2000) {
+            //这里使用Promise.race，以最快 resolve 或 reject 的结果来返回结果
+            return Promise.race([
+                fetch(url),
+                new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        reject('请求超时');
+                    }, timeout);
+                })
+            ]);
+        }
+
+        let url0 = 'https://api.github.com/users/tj';
+        let url1 = 'https://api.github.com/users/etoah';
+        _fetch(url0, 2000)
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                console.log('success')
+                console.log(data)
+                return data;
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    </script>
+</body>
+</html>

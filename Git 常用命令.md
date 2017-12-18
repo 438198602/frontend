@@ -73,17 +73,17 @@ upstream：为远程分支
 
 ## 四、其它git命令
 
-### 1、git版本回退
+### git版本回退
 
 `git reset --hard HEAD^`
 
 HEAD表示当前的版本，HEAD^ 表示上一个版本，上上个版本就是HEAD^^了，以此类推。HEAD~50即回退50个版本。
 
-### 2、gitk（git的图形化工具）
+### gitk（git的图形化工具）
 
 `gitk`
 
-### 3、git 切换分支工作
+### git 切换分支工作
 
 新建新分支
 
@@ -115,4 +115,15 @@ git checkout 分支名
 
 ### 拉取储藏的修改
 
-`git stash apply`
+`git stash apply`  或者先运行`git stash list`查看所有的储藏列表，在运行`git stash apply @XXX`来拉取某个指定的储藏修改
+
+### 删除储藏
+`git stash drop`  使用方法同上
+
+### 查看git历史
+
+1、git log：查看当前分支的存在提交历史记录，不包括诸如删除的或被合并的提交；
+
+2、git reflog：查看当前分支所有操作历史，诸如历史提交记录，撤销，合并提交等详细历史记录；
+
+

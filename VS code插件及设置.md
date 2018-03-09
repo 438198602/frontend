@@ -7,7 +7,7 @@ Path Intellisense  // 路径提示
 React Native Tools
 ```
 
-### VS code设置(1.19.2)
+### VS code设置(1.21.0)
 
 ```
 // 将设置放入此文件中以覆盖默认设置
@@ -24,8 +24,9 @@ React Native Tools
     // 启用后，将在保存文件时剪裁尾随空格。
     "files.trimTrailingWhitespace": true,
     "extensions.ignoreRecommendations": true,
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "workbench.startupEditor": "newUntitledFile",
+    "window.newWindowDimensions": "inherit",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     // px和rem互转
     "px-to-rem.px-per-rem": 37.5
 }

@@ -4,6 +4,7 @@
 Auto Close Tag  // 自动关闭标签
 Auto Rename Tag  // 自动重命名配对的HTML / XML标记
 Path Intellisense  // 路径提示
+cssrem  // px转rem
 React Native Tools
 ```
 
@@ -26,8 +27,6 @@ React Native Tools
     "extensions.ignoreRecommendations": true,
     "workbench.startupEditor": "newUntitledFile",
     "window.newWindowDimensions": "inherit",
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
-    // px和rem互转
-    "px-to-rem.px-per-rem": 37.5
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe"
 }
 ```

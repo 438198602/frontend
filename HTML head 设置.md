@@ -10,7 +10,7 @@
 
 ```
 <!-- DNS 预读取 -->
-<meta http-equiv="x-dns-prefetch-control" content="on">
+<meta http-equiv="x-dns-prefetch-control" content="on"> <!-- Firefox有设置可以关闭dns-prefetch，这里用来强制打开 -->
 <link rel="dns-prefetch" href="//github.com">
 ```
 

@@ -51,7 +51,9 @@ upstream：为远程分支
 
 1、`git add ./`
 
-2、`git commit -m "改动注释"`
+2.1、`git commit -m "改动注释"`
+
+2.2、`git commit --amend -m [message]	使用一次新的commit，替代上一次提交`
 
 3、将远程分支同步到本地
 

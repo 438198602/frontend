@@ -6,10 +6,10 @@
 
 其实setState还有第二种形式，使用回调函数而非对象的形式去更新state，像这样
 
-`
+```
 this.setState((prevState, props) => {
   return {
-    count: preState.count + 1
+    count: prevState.count + 1
   }
-};
-`
+});
+```

@@ -32,6 +32,8 @@ VMware    可以在Windows安装Mac的虚拟机
 
 4、[fetch promise相关代码](https://github.com/438198602/webs/blob/master/fetch_promise.html)
 
+5、[常用js方法](https://github.com/438198602/webs/blob/master/utils.md)
+
 ## 四、gulp、webpack
 
 1、[相关代码在开源中国](https://gitee.com/login)

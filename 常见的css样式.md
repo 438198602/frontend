@@ -97,6 +97,15 @@ word-break: normal;
 word-break: break-all;
 ```
 
+### 文本截断
+
+```
+//单行
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+```
+
 ### box-sizing 让元素的宽度、高度包含border和padding
 
 ```

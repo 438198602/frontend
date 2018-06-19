@@ -36,14 +36,19 @@ Tips: 配合 opacity 属性使用效果更佳！
 ```
 div {
     outline: none; //移动浏览器默认的状态线
-    // outline: 5px dotted red; 也可以设置样式
+    // outline: 1px solid red; 也可以设置样式
+}
+或者
+input:focus{
+    outline: none;
 }
 ```
 
-### contenteditable 设置element是否可编辑
+### contenteditable 规定元素内容是否可编辑
 
 ```
 <p contenteditable="true">可编辑</p>
+<div contenteditable></div>
 ```
 
 ### position: absolute， 让margin有效的
@@ -152,10 +157,11 @@ text-overflow: ellipsis;
 }
 ```
 
-### webkit-playsinline
+### playsinline
 
-手机 video 都可以在页面中播放，而不是全屏播放了。
+手机 video 都可以在页面中播放，而不是全屏播放。
 
 ```
-<video id="myvideo" src="test.mp4" webkit-playsinline="true"></video>
+//待测试
+<video id="myvideo" src="test.mp4" webkit-playsinline playsinline x5-playsinline x-webkit-airplay="allow"></video>
 ```

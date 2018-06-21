@@ -11,3 +11,14 @@ window.isSupportWebp = !![].map && document
   .toDataURL('image/webp')
   .indexOf('data:image/webp') == 0;
 ```
+
+### 判断PC还是移动端
+
+```
+let browser =  navigator.userAgent;
+if (!!browser.match(/AppleWebKit.*Mobile.*/) && !!browser.match(/AppleWebKit/)) {
+  console.log('Mobile Browser');
+} else {
+  console.log('Desktop Browser');
+}
+```

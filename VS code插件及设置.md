@@ -5,6 +5,8 @@ Auto Close Tag  // 自动关闭标签
 Auto Rename Tag  // 自动重命名配对的HTML / XML标记
 Path Intellisense  // 路径提示
 cssrem  // px转rem
+file-size  // 文件大小
+Git History
 React Native Tools
 ```
 
@@ -31,5 +33,6 @@ React Native Tools
     "extensions.ignoreRecommendations": true,
     // root font-size (unit: px), default: 16
     "cssrem.rootFontSize": 16,
+    "javascript.updateImportsOnFileMove.enabled": "always",
 }
 ```

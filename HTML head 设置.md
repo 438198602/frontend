@@ -1,5 +1,15 @@
 # HTML head 设置
 
+### 判断IE（“if lte IE 9” IE9及以下，“if lt IE 9” IE9以下）
+
+```
+<!--[if lte IE 9]>
+  <script>
+    window.location.href = 'http://www.baidu.com';
+  </script>
+<![endif]-->
+```
+
 ### viewport(viewport-fit=cover 兼容iPhoneX的刘海)
 
 ```

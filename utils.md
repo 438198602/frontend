@@ -15,8 +15,11 @@ window.isSupportWebp = !![].map && document
 ### 判断PC还是移动端
 
 ```
-let browser =  navigator.userAgent;
-if (!!browser.match(/AppleWebKit.*Mobile.*/) && !!browser.match(/AppleWebKit/)) {
+var browser =  navigator.userAgent;
+var isiPad = browser.indexOf('iPad') > -1;
+var isMobile = !!browser.match(/AppleWebKit.*Mobile.*/) && !!browser.match(/AppleWebKit/) && !isiPad;
+
+if (isMobile) {
   console.log('Mobile Browser');
 } else {
   console.log('Desktop Browser');

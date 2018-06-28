@@ -74,6 +74,29 @@
 </script>
 ```
 
+### 高清屏的1px
+
+```
+.line1 {
+  position: relative;
+}
+.line1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .line1::after {
+    -ms-transform: scaleY(0.5); /* IE 9 */
+    -webkit-transform: scaleY(0.5); /* Safari */
+    transform: scaleY(0.5); /* 标准语法 */
+  }
+}
+```
+
 ### 使用CDN
 
 ```

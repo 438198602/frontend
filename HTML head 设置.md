@@ -38,36 +38,39 @@
 
 ```
 <script>
-  !function (d) {
-    var c = d.document;
-    var a = c.documentElement;
-    var b = d.devicePixelRatio;
-    var f;
-    function e() {
-      var h = a.getBoundingClientRect().width, g;
-      if (b === 1) {
-        h = 720
+  (function (WIN) {
+    var setFontSize = function (_width) {
+      var docEl = document.documentElement;
+      // 获取当前窗口的宽度
+      var width = _width || docEl.clientWidth;
+
+      if (width > 750) {
+        width = 750;
       }
-      if(h>720) h = 720;  // 设置基准值的极限值
-      g = h / 7.2;
-      a.style.fontSize = g + "px"
+
+      var rem = width * 2 / 7.5;
+      console.log(WIN.devicePixelRatio)
+      console.log(rem);
+      docEl.style.fontSize = rem + 'px';
     }
-    if (b > 2) {
-      b = 3
-    } else {
-      if (b > 1) {
-        b = 2
-      } else {
-        b = 1
+
+    var timer;
+    //函数节流
+    function dbcRefresh() {
+      clearTimeout(timer);
+      timer = setTimeout(setFontSize, 100);
+    }
+
+    //窗口更新动态改变 font-size
+    WIN.addEventListener('resize', dbcRefresh, false);
+    //页面显示时计算一次
+    WIN.addEventListener('pageshow', function (e) {
+      if (e.persisted) {
+        dbcRefresh()
       }
-    }
-    a.setAttribute("data-dpr", b);
-    d.addEventListener("resize", function () {
-      clearTimeout(f);
-      f = setTimeout(e, 200)
     }, false);
-    e()
-  }(window);
+    setFontSize();
+  })(window);
 </script>
 ```
 

@@ -27,8 +27,8 @@
 ### 启用360等浏览器的极速模式(webkit)/不让百度转码
 
 ```
-<meta name="renderer" content="webkit"> <!-- 用在360中 -->
-<meta name="force-rendering" content="webkit"> <!-- 用在其它 -->
+<meta name="renderer" content="webkit"> <!-- 用在360等国内双核浏览器中 -->
+<meta name="force-rendering" content="webkit"> <!-- 用在其它非主流浏览器 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 针对 IE 浏览器 -->
 <meta http-equiv="Cache-Control" content="no-transform"> <!-- 针对百度搜索 -->
 <meta name="format-detection" content="telephone=no,email=no,adress=no">

@@ -4,7 +4,7 @@
 
 ```
 {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 ```
 
@@ -37,10 +37,10 @@
 
 ```
 div {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 ```
 
@@ -48,23 +48,23 @@ div {
 
 ```
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }
 .clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
 }
  ```
 
- ### user-select 禁止用户选中文本
+### user-select 禁止用户选中文本
 
 ```
 div {
-    user-select: none;
+  user-select: none;
 }
 ```
 
@@ -86,16 +86,16 @@ Tips: 配合 opacity 属性使用效果更佳！
 
 ```
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: pink;
+  color: pink;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-    color: pink;
+  color: pink;
 }
 :-ms-input-placeholder { /* IE 10+ */
-    color: pink;
+  color: pink;
 }
 :-moz-placeholder { /* Firefox 18- */
-    color: pink;
+  color: pink;
 }
 ```
 
@@ -103,12 +103,12 @@ Tips: 配合 opacity 属性使用效果更佳！
 
 ```
 div {
-    outline: none; //移动浏览器默认的状态线
-    // outline: 1px solid red; 也可以设置样式
+  outline: none; //移动浏览器默认的状态线
+  // outline: 1px solid red; 也可以设置样式
 }
 或者
 input:focus{
-    outline: none;
+  outline: none;
 }
 ```
 
@@ -184,7 +184,8 @@ text-overflow: ellipsis;
 
 手机 video 都可以在页面中播放，而不是全屏播放。
 
+> 待测试
+
 ```
-//待测试
 <video id="myvideo" src="test.mp4" webkit-playsinline playsinline x5-playsinline x-webkit-airplay="allow"></video>
 ```

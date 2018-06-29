@@ -84,7 +84,7 @@ div {
 
 ```
 div {
-    user-select: none; /* Standard syntax */
+    user-select: none;
 }
 ```
 

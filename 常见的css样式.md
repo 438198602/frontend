@@ -1,5 +1,73 @@
 # 一些常见的css样式
 
+### box-sizing 让元素的宽度、高度包含border和padding
+
+```
+{
+    box-sizing: border-box;
+}
+```
+
+### 高清屏的1px
+
+```
+.line1 {
+  position: relative;
+}
+.line1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .line1::after {
+    -ms-transform: scaleY(0.5); /* IE 9 */
+    -webkit-transform: scaleY(0.5); /* Safari */
+    transform: scaleY(0.5); /* 标准语法 */
+  }
+}
+```
+
+### position: absolute， 让margin有效的
+
+设置left:0, right:0 就可以。原因是两边都是0不存在边距，element就可以得出距离，并居中。
+
+```
+div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+```
+
+### 使用 clearfix 清除浮动。
+
+```
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+ ```
+
+ ### user-select 禁止用户选中文本
+
+```
+div {
+    user-select: none;
+}
+```
+
 ### 超链接
 
 ```
@@ -49,43 +117,6 @@ input:focus{
 ```
 <p contenteditable="true">可编辑</p>
 <div contenteditable></div>
-```
-
-### position: absolute， 让margin有效的
-
-设置left:0, right:0 就可以。原因是两边都是0不存在边距，element就可以得出距离，并居中。
-
-```
-div {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-```
-
-### 使用 clearfix 清除浮动。
-
-```
-.clearfix {
-    zoom: 1;
-}
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-}
- ```
-
- ### user-select 禁止用户选中文本
-
-```
-div {
-    user-select: none;
-}
 ```
 
 ### css实现不换行、自动换行、强制换行
@@ -146,14 +177,6 @@ text-overflow: ellipsis;
   top: -20px;
   padding-right: 5px;
   background-color: #fff;
-}
-```
-
-### box-sizing 让元素的宽度、高度包含border和padding
-
-```
-{
-    box-sizing: border-box;
 }
 ```
 

@@ -74,6 +74,14 @@
 </script>
 ```
 
+### 用VW替换上述js方法（设置html的font-size，这样在750px的设计稿上,1rem = 100px）
+
+```
+html {
+  font-size: 13.333333333333334vw;
+}
+```
+
 ### 高清屏的1px
 
 ```

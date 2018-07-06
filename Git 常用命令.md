@@ -47,6 +47,9 @@ upstream：为远程分支
 
 `git push -u origin master`
 
+> notes: git pull 提示 fatal: refusing to merge unrelated histories
+解决方法 `git pull --allow-unrelated-histories`
+
 ## 三、git提交更改
 
 1、`git add ./`

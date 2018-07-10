@@ -34,6 +34,8 @@ VMware    可以在Windows安装Mac的虚拟机
 
 5、[常用js方法](https://github.com/438198602/webs/blob/master/utils.md)
 
+6、[js 笔记](https://github.com/438198602/webs/issues/3)
+
 ## 四、gulp、webpack
 
 1、[相关代码在开源中国](https://gitee.com/login)

@@ -31,8 +31,11 @@ React Native Tools
     "files.trimTrailingWhitespace": true,
     // 如果设置为 "true"，将不再显示扩展建议的通知。
     "extensions.ignoreRecommendations": true,
+    // 若设置为 "true"，将在离开“扩展”视图时，自动关闭扩展详细信息页面。
+    "extensions.closeExtensionDetailsOnViewChange": true,
+    // 若设置为 "true"，除非由用户进行请求，我们不会获取或显示推荐。
+    "extensions.showRecommendationsOnlyOnDemand": true,
     // root font-size (unit: px), default: 16
     "cssrem.rootFontSize": 16,
-    "javascript.updateImportsOnFileMove.enabled": "always",
 }
 ```

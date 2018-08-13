@@ -1,0 +1,38 @@
+### EchoSite---让内网穿透变得简单
+
+一、去官网 https://echosite.2bdata.com 注册，并获得一个免费的域名（3个月）
+
+二、下载客户端和配置文件
+
+三、把客户端执行文件（echosite.exe）和配置文件（echosite.yml）放到同一个目录下，然后编辑你的配置文件：
+
+1、修改 echo_account echo_password （注册时的手机号和密码）
+
+2、修改域名 subdomain （免费获取的域名前缀）
+
+3、修改代理的地址 http （127.0.0.1:8080）
+
+四、执行cmd命令： echosite -config=echosite.yml start name1
+
+
+### nginx
+
+一、启动
+
+注意不要直接双击nginx.exe，这样会导致修改配置后重启、停止nginx无效，需要手动关闭任务管理器内的所有nginx进程。
+
+在nginx.exe目录，打开命令行工具，用命令 启动/关闭/重启nginx
+
+start nginx    启动nginx
+
+nginx -s reload    修改配置后重新加载生效
+
+nginx -s reopen    重新打开日志文件
+
+nginx -t -c /path/to/nginx.conf   测试nginx配置文件是否正确
+
+关闭nginx：
+
+nginx -s stop    快速停止nginx
+
+nginx -s quit    完整有序的停止nginx

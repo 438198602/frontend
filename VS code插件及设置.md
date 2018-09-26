@@ -44,7 +44,7 @@ Chinese (Simplified) Language Pack for Visual Studio Code  // 适用于 VS Code 
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,
     "sync.autoDownload": false,
-    "sync.autoUpload": true,
+    "sync.autoUpload": false,
     "sync.forceDownload": false,
 }
 ```

@@ -8,6 +8,9 @@ cssrem  // px转rem
 file-size  // 文件大小
 Git History
 React Native Tools
+Settings Sync  // 代码同步
+EditorConfig for VS Code  // 读取.editorconfig文件配置
+Chinese (Simplified) Language Pack for Visual Studio Code  // 适用于 VS Code 的中文（简体）语言包
 ```
 
 ### VS code设置(1.21.0)
@@ -17,10 +20,10 @@ React Native Tools
 {
     // 窗口失去焦点自动保存
     "files.autoSave": "onWindowChange",
-    // 空格数
-    "editor.tabSize": 2,
     // 自动换行
     "editor.wordWrap": "on",
+    // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
+    "workbench.statusBar.feedback.visible": false,
     // 控制在已有窗口时新打开窗口的尺寸继承上一活动窗口的尺寸
     "window.newWindowDimensions": "inherit",
     // 启用后，保存文件时在文件末尾插入一个最终新行。
@@ -29,13 +32,19 @@ React Native Tools
     "files.trimFinalNewlines": true,
     // 启用后，将在保存文件时剪裁尾随空格。
     "files.trimTrailingWhitespace": true,
-    // 如果设置为 "true"，将不再显示扩展建议的通知。
-    "extensions.ignoreRecommendations": true,
-    // 若设置为 "true"，将在离开“扩展”视图时，自动关闭扩展详细信息页面。
+    // 启用后，将在离开“扩展”视图时，自动关闭扩展详细信息页面。
     "extensions.closeExtensionDetailsOnViewChange": true,
-    // 若设置为 "true"，除非由用户进行请求，我们不会获取或显示推荐。
+    // 启用后，将不会显示扩展建议的通知。
+    "extensions.ignoreRecommendations": true,
+    // 启用后，除非用户特别进行请求，将不会获取或显示推荐。某些推荐将从联机服务中获取。
     "extensions.showRecommendationsOnlyOnDemand": true,
-    // root font-size (unit: px), default: 16
-    "cssrem.rootFontSize": 16,
+    // 代码同步配置
+    "sync.gist": "",
+    "sync.quietSync": true,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": true,
+    "sync.forceDownload": false,
 }
 ```

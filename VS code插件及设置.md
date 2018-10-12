@@ -38,6 +38,10 @@ Chinese (Simplified) Language Pack for Visual Studio Code  // 适用于 VS Code 
     "extensions.ignoreRecommendations": true,
     // 启用后，除非用户特别进行请求，将不会获取或显示推荐。某些推荐将从联机服务中获取。
     "extensions.showRecommendationsOnlyOnDemand": true,
+    // 保存时设置文件的格式。格式化程序必须可用，不能自动保存文件，并且不能关闭编辑器。
+    "editor.formatOnSave": true,
+    // 控制编辑器在键入一行后是否自动格式化该行。
+    "editor.formatOnType": true,
     // 代码同步配置
     "sync.gist": "",
     "sync.quietSync": true,

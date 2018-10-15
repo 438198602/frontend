@@ -11,6 +11,7 @@ React Native Tools
 Settings Sync  // 代码同步
 EditorConfig for VS Code  // 读取.editorconfig文件配置
 Chinese (Simplified) Language Pack for Visual Studio Code  // 适用于 VS Code 的中文（简体）语言包
+Vetur  // 自动识别.vue文件、格式化vue代码
 ```
 
 ### VS code设置(1.21.0)
@@ -42,6 +43,10 @@ Chinese (Simplified) Language Pack for Visual Studio Code  // 适用于 VS Code 
     "editor.formatOnSave": true,
     // 控制编辑器在键入一行后是否自动格式化该行。
     "editor.formatOnType": true,
+    // vetur相关配置
+    "vetur.format.defaultFormatter.html": "prettyhtml",
+    "vetur.format.scriptInitialIndent": true,
+    "vetur.format.styleInitialIndent": true,
     // 代码同步配置
     "sync.gist": "",
     "sync.quietSync": true,

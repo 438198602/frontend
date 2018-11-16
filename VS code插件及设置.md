@@ -43,17 +43,29 @@ Vetur  // 自动识别.vue文件、格式化vue代码
     "editor.formatOnSave": true,
     // 控制编辑器在键入一行后是否自动格式化该行。
     "editor.formatOnType": true,
+    "auto-rename-tag.activationOnLanguage": [
+        "html",
+        "xml"
+    ],
     // vetur相关配置
     "vetur.format.defaultFormatter.html": "prettyhtml",
     "vetur.format.scriptInitialIndent": true,
     "vetur.format.styleInitialIndent": true,
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {},
+        "prettyhtml": {
+            "printWidth": "auto",
+            "singleQuote": false
+        }
+    },
     // 代码同步配置
     "sync.gist": "",
-    "sync.quietSync": true,
+    "sync.quietSync": false,
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,
     "sync.autoDownload": false,
-    "sync.autoUpload": false,
     "sync.forceDownload": false,
+    "sync.autoUpload": false,
+    "sync.askGistName": true,
 }
 ```

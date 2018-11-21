@@ -59,7 +59,7 @@ Vetur  // 自动识别.vue文件、格式化vue代码
         }
     },
     // 代码同步配置
-    "sync.gist": "",
+    "sync.gist": "fd043ae29a7b5e5de2ef433105edf48c",
     "sync.quietSync": false,
     "sync.removeExtensions": true,
     "sync.syncExtensions": true,

@@ -10,20 +10,6 @@
 <![endif]-->
 ```
 
-### viewport(viewport-fit=cover 兼容iPhoneX的刘海)
-
-```
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
-```
-
-### DNS 预读取
-
-```
-<!-- DNS 预读取 -->
-<meta http-equiv="x-dns-prefetch-control" content="on"> <!-- Firefox有设置可以关闭dns-prefetch，这里用来强制打开 -->
-<link rel="dns-prefetch" href="//github.com">
-```
-
 ### 启用360等浏览器的极速模式(webkit)/不让百度转码
 
 ```

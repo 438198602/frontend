@@ -18,7 +18,7 @@ VMware    可以在Windows安装Mac的虚拟机
 
 3、[web代理](https://github.com/438198602/webs/blob/master/%E4%BB%A3%E7%90%86.md)
 
-4、[Mac 相关](https://github.com/438198602/webs/blob/master/Mac%20%E7%9B%B8%E5%85%B3)
+4、[Mac 相关](https://github.com/438198602/webs/blob/master/Mac%20%E7%9B%B8%E5%85%B3.md)
 
 ## 二、ReactNative
 

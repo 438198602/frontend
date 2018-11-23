@@ -1,13 +1,5 @@
 # 一些常见的css样式
 
-### box-sizing 让元素的宽度、高度包含border和padding
-
-```
-{
-  box-sizing: border-box;
-}
-```
-
 ### 高清屏的1px
 
 ```

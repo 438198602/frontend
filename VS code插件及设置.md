@@ -23,6 +23,10 @@ Vetur  // 自动识别.vue文件、格式化vue代码
     "files.autoSave": "onWindowChange",
     // 自动换行
     "editor.wordWrap": "on",
+    // 保存时设置文件的格式。格式化程序必须可用，不能自动保存文件，并且不能关闭编辑器。
+    "editor.formatOnSave": true,
+    // 控制编辑器在键入一行后是否自动格式化该行。
+    "editor.formatOnType": true,
     // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
     "workbench.statusBar.feedback.visible": false,
     // 控制在已有窗口时新打开窗口的尺寸继承上一活动窗口的尺寸
@@ -39,18 +43,16 @@ Vetur  // 自动识别.vue文件、格式化vue代码
     "extensions.ignoreRecommendations": true,
     // 启用后，除非用户特别进行请求，将不会获取或显示推荐。某些推荐将从联机服务中获取。
     "extensions.showRecommendationsOnlyOnDemand": true,
-    // 保存时设置文件的格式。格式化程序必须可用，不能自动保存文件，并且不能关闭编辑器。
-    "editor.formatOnSave": true,
-    // 控制编辑器在键入一行后是否自动格式化该行。
-    "editor.formatOnType": true,
+    // Auto Rename Tag configuration
     "auto-rename-tag.activationOnLanguage": [
         "html",
         "xml"
     ],
+    // 代码同步配置
+    "sync.askGistName": true,
+    "sync.gist": "fd043ae29a7b5e5de2ef433105edf48c",
     // vetur相关配置
     "vetur.format.defaultFormatter.html": "prettyhtml",
-    "vetur.format.scriptInitialIndent": true,
-    "vetur.format.styleInitialIndent": true,
     "vetur.format.defaultFormatterOptions": {
         "js-beautify-html": {},
         "prettyhtml": {
@@ -58,14 +60,7 @@ Vetur  // 自动识别.vue文件、格式化vue代码
             "singleQuote": false
         }
     },
-    // 代码同步配置
-    "sync.gist": "fd043ae29a7b5e5de2ef433105edf48c",
-    "sync.quietSync": false,
-    "sync.removeExtensions": true,
-    "sync.syncExtensions": true,
-    "sync.autoDownload": false,
-    "sync.forceDownload": false,
-    "sync.autoUpload": false,
-    "sync.askGistName": true,
+    "vetur.format.scriptInitialIndent": true,
+    "vetur.format.styleInitialIndent": true,
 }
 ```

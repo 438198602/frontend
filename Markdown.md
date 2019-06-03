@@ -2,13 +2,15 @@
 
 参考链接 <http://www.jianshu.com/p/67cc81003064>
 
+> 换行：句末添加两个空格
+
 ### 链接
 
 ```
-github <https://github.com/438198602>
+[github](<https://github.com/438198602>)
 ```
 
-github <https://github.com/438198602>
+[github](<https://github.com/438198602>)
 
 ### 图片
 
@@ -37,7 +39,27 @@ github <https://github.com/438198602>
 ### 引用
 
 ```
-> 天才就是99%的努力加上1%的灵感。-爱迪生
+> 天才就是99%的努力加上1%的灵感。-爱迪生  
+> 天才就是99%的努力加上1%的灵感。-爱迪生  
 ```
 
-> 天才就是99%的努力加上1%的灵感。-爱迪生
+> 天才就是99%的努力加上1%的灵感。-爱迪生  
+> 天才就是99%的努力加上1%的灵感。-爱迪生  
+
+### 复选框
+
+```
+- [x] Be awesome
+- [ ] Prepare dinner
+  - [x] Research recipe
+  - [ ] Buy ingredients
+  - [ ] Cook recipe
+- [ ] Sleep
+```
+
+- [x] Be awesome
+- [ ] Prepare dinner
+  - [x] Research recipe
+  - [ ] Buy ingredients
+  - [ ] Cook recipe
+- [ ] Sleep

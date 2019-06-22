@@ -1,5 +1,18 @@
 # 一些常见的css样式
 
+### 全局设置
+
+```
+body {
+  /* 移动端触摸元素时出现半透明灰色遮罩 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 禁用系统默认的长按菜单 */
+  -webkit-touch-callout: none;
+  /* 禁止用户选中文本 */
+  user-select: none;
+}
+```
+
 ### 高清屏的1px
 
 ```
@@ -51,14 +64,6 @@ div {
   height: 0;
 }
  ```
-
-### user-select 禁止用户选中文本
-
-```
-div {
-  user-select: none;
-}
-```
 
 ### 超链接
 

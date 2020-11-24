@@ -186,3 +186,28 @@ text-overflow: ellipsis;
 ```
 <video id="myvideo" src="test.mp4" webkit-playsinline playsinline x5-playsinline x-webkit-airplay="allow"></video>
 ```
+
+### 图片加载失败显示默认图
+
+利用css伪元素实现
+
+```
+img {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #ccc;
+  vertical-align: top;
+}
+img:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.baidu.com/img/flexible/logo/pc/result.png")
+    #ccc;
+}
+```

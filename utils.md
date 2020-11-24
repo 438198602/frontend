@@ -143,16 +143,16 @@ const CheckImgExists = (imgurl) => {
  * @param {String} key 去重的关键参数
  * @param {Object} data 去重的对象
  */
-export function uniqueObject(key = 'id', data) {
-	let result = {};
-	let finalResult = [];
-	for (let i = 0; i < data.length; i++) {
-		result[data[i][key]] = data[i];
-	}
-	for (let item in result) {
-		finalResult.push(result[item]);
-	}
+export function uniqueObject(key = "id", data) {
+  let result = {};
+  let finalResult = [];
+  for (let i = 0; i < data.length; i++) {
+    result[data[i][key]] = data[i];
+  }
+  for (let item in result) {
+    finalResult.push(result[item]);
+  }
 
-	return finalResult;
+  return finalResult;
 }
 ```

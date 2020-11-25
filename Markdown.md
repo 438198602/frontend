@@ -8,9 +8,12 @@
 
 ```
 [github](<https://github.com/438198602>)
+[github 新窗口](<https://github.com/438198602>){:target="_blank"}
 ```
 
 [github](<https://github.com/438198602>)
+
+[github 新窗口](<https://github.com/438198602>){:target="_blank"}
 
 ### 图片
 

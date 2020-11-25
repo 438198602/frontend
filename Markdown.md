@@ -1,7 +1,5 @@
 # Markdown 常用语法
 
-参考链接 <http://www.jianshu.com/p/67cc81003064>
-
 > 换行：句末添加两个空格
 
 ### 链接
@@ -16,6 +14,8 @@
 [github 带title](https://github.com/438198602 "这是title")
 
 ### 图片
+
+> alt 写法与链接相同
 
 ```
 ![头像](https://avatars0.githubusercontent.com/u/2120155?v=3&s=40)

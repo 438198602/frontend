@@ -181,7 +181,9 @@ text-overflow: ellipsis;
 
 手机 video 都可以在页面中播放，而不是全屏播放。
 
-> 待测试
+> playsinline 页面内播放（webkit- webkit内核；x5- x5内核，QQ浏览器、微信等）
+
+> x-webkit-airplay ios连接 airplay
 
 ```
 <video id="myvideo" src="test.mp4" webkit-playsinline playsinline x5-playsinline x-webkit-airplay="allow"></video>

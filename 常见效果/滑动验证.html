@@ -103,9 +103,7 @@
         </style>
         <style>
             #slider {
-                margin: 30px;
-                width: 350px;
-                height: 44px;
+                margin: 50px;
             }
         </style>
     </head>
@@ -193,6 +191,11 @@
                             'height': this.options.barSize.height,
                             'left': 0
                         });
+                        this.htmlDoms.icon.css({
+                            'width': this.options.barSize.height,
+                            'height': this.options.barSize.height,
+                            'line-height': this.options.barSize.height
+                        });
                         this.htmlDoms.left_bar.css({
                             'width': this.options.barSize.width,
                             'height': this.options.barSize.height
@@ -267,6 +270,10 @@
         </script>
         <script>
             slideVerify.init($("#slider"), {
+                barSize: {
+                    width: '240px',
+                    height: '34px'
+                },
                 ready: function () {
                     console.log("---ready---");
                 },

@@ -272,8 +272,8 @@
                                     'border-color': '#7ac23c'
                                 });
                                 this.htmlDoms.icon.html('&#xe675;');
-                                this.htmlDoms.move_block.unbind('mousedown');
-                                this.htmlDoms.move_block.unbind('touchstart');
+                                this.htmlDoms.move_block.off('mousedown');
+                                this.htmlDoms.move_block.off('touchstart');
                                 this.htmlDoms.msg.text(this.options.msg.successText);
                                 this.options.success();
                             } else {

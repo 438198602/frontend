@@ -145,6 +145,10 @@
                         that._addEventListener(document, "mouseup", function() {
                             that.end();
                         });
+                        // 滑动元素在iframe内
+                        that._addEventListener(window.top.document, "mouseup", function() {
+                            that.end();
+                        });
                     },
                     loadDom: function() {
                         var verifyHtml = '';

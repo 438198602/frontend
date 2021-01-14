@@ -1,3 +1,23 @@
+### 模拟a标签跳转
+
+```
+export const imitateClick = (url) => {
+	var aEle = document.createElement('a');
+	aEle.setAttribute('href', url);
+	aEle.setAttribute('target', '_blank');
+	aEle.setAttribute('id', 'previewJumpEle');
+
+    // 防止重复添加
+    if (!document.getElementById('previewJumpEle')) {
+    	document.body.appendChild(aEle);
+    }
+
+    // 模拟点击
+    aEle.click();
+    (aEle.remove && aEle.remove()) || (aEle.removeNode && aEle.removeNode(true));
+}
+```
+
 ### 判断是否支持webp
 
 ```

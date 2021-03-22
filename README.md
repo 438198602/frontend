@@ -1,10 +1,9 @@
 ## 前端开发的一些随笔
 
-[chrome 完整安装包](https://www.google.com/intl/zh-CN/chrome/?standalone=1)
+1. [chrome 完整安装包](https://www.google.com/intl/zh-CN/chrome/?standalone=1)
 
-#### 梯子
-
-1、[佛跳墙](https://github.com/getfotiaoqiang/download)
+2. 梯子
+    1. [佛跳墙](https://github.com/getfotiaoqiang/download)
 
 
 ## article

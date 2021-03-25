@@ -123,6 +123,16 @@ git checkout 分支名
 3、 恢复储藏  `git stash apply` or `git stash pop`
 > pop 恢复后会从列表中删除该条记录，apply 则不会
 
+4、 清除所有储藏  `git stash clear`
+
+5、 恢复误删的储藏
+
+`git fsck --lost-found`  得到列表
+
+`git show + id`  查看是否是自己想要的代码，排列顺序是最新的在最上面
+
+`git merge + id`  恢复代码
+
 ### 查看git历史
 
 1、git log：查看当前分支的存在提交历史记录，不包括诸如删除的或被合并的提交；

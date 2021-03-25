@@ -114,16 +114,14 @@ git checkout 分支名
 
 `git branch -d 分支名`
 
-### 切换分支前储藏当前分支的修改（不add和commit）
+### 储藏 stash
 
-`git stash`
+1、 添加储藏  `git stash` or `git stash save "Your stash message"`
 
-### 拉取储藏的修改
+2、 储藏列表  `git stash list`
 
-`git stash apply`  或者先运行`git stash list`查看所有的储藏列表，在运行`git stash apply @XXX`来拉取某个指定的储藏修改
-
-### 删除储藏
-`git stash drop`  使用方法同上
+3、 恢复储藏  `git stash apply` or `git stash pop`
+> pop 恢复后会从列表中删除该条记录，apply 则不会
 
 ### 查看git历史
 

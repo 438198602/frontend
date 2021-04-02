@@ -71,8 +71,8 @@ div {
 a /*所有超链接*/
 a:link /*超链接文字格式*/
 a:visited /*浏览过的链接文字格式*/
-a:active /*按下链接的格式*/
 a:hover /*鼠标转到链接*/
+a:active /*按下链接的格式*/
 ```
 
 ### ::-webkit-input-placeholder

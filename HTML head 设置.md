@@ -22,6 +22,8 @@
 
 ### iPhoneX刘海兼容
 
+> https://jelly.jd.com/article/6006b1055b6c6a01506c87fd
+
 ```
 <meta
   name="viewport"

@@ -155,24 +155,20 @@ const CheckImgExists = (imgurl) => {
 };
 ```
 
-### 对象去重
+### 数组对象去重
 
 ```
 /**
- * 去重
- * @param {String} key 去重的关键参数
- * @param {Object} data 去重的对象
+ * 数组对象去重
+ * @param {Array} arr - 需要去重的数组
+ * @param {String} key - 去重关键字段
  */
-export function uniqueObject(key = "id", data) {
-  let result = {};
-  let finalResult = [];
-  for (let i = 0; i < data.length; i++) {
-    result[data[i][key]] = data[i];
-  }
-  for (let item in result) {
-    finalResult.push(result[item]);
-  }
-
-  return finalResult;
+export function deduplication(arr, key) {
+  let obj = {};
+  arr = arr.reduce(function(item, next) {
+    obj[next[key]] ? '' : (obj[next[key]] = true && item.push(next));
+    return item;
+  }, []);
+  return arr;
 }
 ```

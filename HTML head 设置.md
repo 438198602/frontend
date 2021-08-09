@@ -55,8 +55,6 @@ body {
       }
 
       var rem = width * 2 / 7.5;
-      console.log(WIN.devicePixelRatio)
-      console.log(rem);
       docEl.style.fontSize = rem + 'px';
     }
 

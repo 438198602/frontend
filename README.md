@@ -1,5 +1,9 @@
 ## 前端开发的一些随笔
 
+## 注意
+
+1、`new Date("2021-08-20 11:11")` 在 iOS 上会返回 Invalid Date，可以使用 `new Date("2021-08-20 11:11").replace(/-/g, "/")`
+
 ## 工具
 
 1、[chrome 完整安装包](https://www.google.com/intl/zh-CN/chrome/?standalone=1)

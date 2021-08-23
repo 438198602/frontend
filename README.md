@@ -61,6 +61,8 @@
 
 5、[js 自增（++）](https://github.com/438198602/frontend/issues/6)
 
+6、[使用 setTimeout 模拟 setInterval](https://github.com/438198602/frontend/issues/12)
+
 七、CSS
 
 1、[常见的css样式](https://github.com/438198602/frontend/blob/master/%E5%B8%B8%E8%A7%81%E7%9A%84css%E6%A0%B7%E5%BC%8F.md)

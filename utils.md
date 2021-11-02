@@ -172,3 +172,82 @@ export function deduplication(arr, key) {
   return arr;
 }
 ```
+
+### 判断数据类型
+
+```
+/**
+ * 判断数据类型
+ * @param {*} obj - 需要判断类型的数据
+ */
+export function typeOf(obj) {
+  return Object.prototype.toString.call(obj).slice(8,-1).toLowerCase();
+}
+```
+
+### 节流函数
+
+> 在固定的时间间隔内，无论执行多少次函数，都只会在间隔结束时执行一次。
+
+```
+/**
+ * 节流函数
+ * @param {Function} fn - 函数
+ * @param {String} delay - 时间间隔
+ */
+export function throttle(fn, delay) {
+    let timer = null;
+    return function() {
+        let context = this;
+        let args = arguments;
+        if(timer) {
+            return;
+        }
+        timer = setTimeout(function() {
+            fn.apply(context, args);
+            timer = null
+        }, delay);
+    }
+}
+```
+
+### 防抖函数
+
+> 在规定的时间内未执行第二次，则执行函数，否则就重置计时器，重新开始计算。
+
+```
+/**
+ * 防抖函数
+ * @param {Function} fn - 函数
+ * @param {String} delay - 时间间隔
+ */
+ function debounce(fn, delay) {
+    let timer = null;
+    return function() {
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            fn.apply(context, args);
+        }, delay);
+    }
+}
+ ```
+ 
+ ### 深拷贝
+ 
+ ```
+/**
+ * 深拷贝
+ * @param {Array|Object} obj - 需要深拷贝的对象
+ */
+ function deepClone(obj) {
+    let copy = obj instanceof Array ? [] : {};
+    for(let i in obj){
+        if(obj.hasOwnProperty(i)) {
+            copy[i] = typeof obj[i] == 'object' ? deepClone(obj[i]) : obj[i];
+        }
+    }
+    return copy;
+}
+ ```

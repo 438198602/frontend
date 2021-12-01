@@ -91,7 +91,7 @@
 
 9、[移动端的滚动穿透](https://github.com/438198602/frontend/issues/11)
 
-10、[AndroidStudio修改hosts]()
+10、[AndroidStudio修改hosts](https://github.com/438198602/frontend/blob/master/AndroidStudio%E4%BF%AE%E6%94%B9hosts.md)
 
 
 ## 常见效果

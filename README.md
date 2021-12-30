@@ -102,6 +102,8 @@
 
 2、[走马灯](https://github.com/438198602/frontend/blob/master/%E5%B8%B8%E8%A7%81%E6%95%88%E6%9E%9C/%E8%B5%B0%E9%A9%AC%E7%81%AF.md)
 
+3、[input文本中间插入表情](https://github.com/438198602/frontend/blob/master/%E5%B8%B8%E8%A7%81%E6%95%88%E6%9E%9C/input_select.html)
+
 
 ## fork
 

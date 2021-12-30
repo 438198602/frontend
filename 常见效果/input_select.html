@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input文本中间插入表情</title>
+  </head>
+  <body>
+    <p>input文本中间插入表情</p>
+    <input type="text" id="chat" value="123456789" />
+    <button id="btn">添加 #</button>
+
+    <script>
+      // 在指定光标处添加
+      let blurSelectionStart = null,
+        blurSelectionEnd = null,
+        cursorTimer = null,
+        chatEle = document.getElementById('chat'),
+        btnEle = document.getElementById('btn');
+      chatEle.onblur = function () {
+        const { selectionStart, selectionEnd } = chatEle;
+        blurSelectionStart = selectionStart;
+        blurSelectionEnd = selectionEnd;
+      };
+      btnEle.onclick = function () {
+        clearTimeout(cursorTimer);
+        let value = chatEle.value,
+          start = blurSelectionStart == null ? value.length : blurSelectionStart,
+          end = blurSelectionEnd == null ? start : blurSelectionEnd;
+        addValue = '#';
+        value = value.substring(0, start) + addValue + value.substring(end);
+        chatEle.value = value;
+        chatEle.focus();
+        // 添加延时，等设置input焦点后在插入内容，否则光标可能会出现在最后面
+        cursorTimer = setTimeout(() => {
+          chatEle.setSelectionRange(++start, start);
+          blurSelectionStart = null;
+          blurSelectionEnd = null;
+        });
+      };
+    </script>
+  </body>
+</html>

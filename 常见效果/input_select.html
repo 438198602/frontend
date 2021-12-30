@@ -27,8 +27,8 @@
         clearTimeout(cursorTimer);
         let value = chatEle.value,
           start = blurSelectionStart == null ? value.length : blurSelectionStart,
-          end = blurSelectionEnd == null ? start : blurSelectionEnd;
-        addValue = '#';
+          end = blurSelectionEnd == null ? start : blurSelectionEnd,
+          addValue = '#';
         value = value.substring(0, start) + addValue + value.substring(end);
         chatEle.value = value;
         chatEle.focus();
@@ -37,7 +37,7 @@
           chatEle.setSelectionRange(++start, start);
           blurSelectionStart = null;
           blurSelectionEnd = null;
-        });
+        }, 10);
       };
     </script>
   </body>

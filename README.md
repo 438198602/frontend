@@ -8,12 +8,20 @@
 
 1、[chrome 完整安装包](https://www.google.com/intl/zh-CN/chrome/?standalone=1)
 
-2、[佛跳墙](https://github.com/getfotiaoqiang/download)
+2、[佛跳墙](https://github.com/getaurora/download)
 
 3、[图片压缩](https://tinypng.com/)
 
 4、[win10 激活](https://github.com/massgravel/Microsoft-Activation-Scripts/releases)
 
+## 开发环境
+
+1. [nvm](https://github.com/coreybutler/nvm-windows/releases) - nodejs管理工具
+- > 注意nvm和node的安装目录不能有中文和空格
+2. [vscode](https://code.visualstudio.com/)
+3. fiddler - 抓包工具
+4. [git](https://git-scm.com/)
+5. Windows Terminal
 
 ## notes
 

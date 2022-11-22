@@ -139,4 +139,8 @@ git checkout 分支名
 
 2、git reflog：查看当前分支所有操作历史，诸如历史提交记录，撤销，合并提交等详细历史记录；
 
+### git对比排除某个文件
+
+`git diff origin/master ':(exclude)dist'`
+
 

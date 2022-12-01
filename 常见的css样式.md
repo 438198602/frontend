@@ -13,6 +13,21 @@ body {
 }
 ```
 
+### 页面变灰色（ie7+，ie10、11不支持）
+
+```
+body {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+            filter: grayscale(100%);
+            filter: gray;
+}
+```
+
+
 ### 高清屏的1px
 
 ```

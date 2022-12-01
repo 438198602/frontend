@@ -13,10 +13,14 @@ body {
 }
 ```
 
-### 页面变灰色（ie7+，ie10、11不支持）
+### 页面变灰色
+
+> https://developer.mozilla.org/zh-CN/docs/Web/CSS/position
+> 对于指定了 filter 样式且值不为 none 时，被应用该样式的元素其子元素中如果有 position 为 absolute 或 fixed 的元素，会为这些元素创建一个新的容器，使得这些绝对或固定定位的元素其定位的基准相对于这个新创建的容器。
+> 因此，我们可以将该样式应用到根元素html上，即使创建了新的定位基准元素，也不会对子孙元素产生不符合预期的影响
 
 ```
-body {
+html {
     filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
     -webkit-filter: grayscale(100%);
        -moz-filter: grayscale(100%);

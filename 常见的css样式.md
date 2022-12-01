@@ -13,7 +13,7 @@ body {
 }
 ```
 
-### 页面变灰色
+### 页面变灰色（ie7-9，其它浏览器，不支持ie10、ie11）
 
 > https://developer.mozilla.org/zh-CN/docs/Web/CSS/position
 > 
@@ -22,15 +22,27 @@ body {
 > 因此，我们可以将该样式应用到根元素html上，即使创建了新的定位基准元素，也不会对子孙元素产生不符合预期的影响
 
 ```
-html {
-    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-    -webkit-filter: grayscale(100%);
-       -moz-filter: grayscale(100%);
-        -ms-filter: grayscale(100%);
-         -o-filter: grayscale(100%);
-            filter: grayscale(100%);
-            filter: gray;
-}
+<style type="text/css">
+    html {
+        -webkit-filter: grayscale(100%);
+           -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+             -o-filter: grayscale(100%);
+                filter: grayscale(100%);
+    }
+</style>
+<!--[if IE]>
+<style type="text/css">
+    * {
+        -webkit-filter: grayscale(100%);
+           -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+             -o-filter: grayscale(100%);
+                filter: grayscale(100%);
+                filter: gray;
+    }
+</style>
+<![endif]-->
 ```
 
 

@@ -14,7 +14,14 @@
 
 
 # 修改响应状态码
+#    statusCode 直接根据设置的状态码返回，不会请求到线上
+#    replaceStatus 请求响应后再修改状态码
+#    includeFilter://m:post 请求为post类型
+#    excludeFilter://m:options 请求不是options类型
 # https://dev.com replaceStatus://500
+# https://dev.com statusCode://400
+# https://dev.com includeFilter://m:post statusCode://500
+# https://dev.com excludeFilter://m:options statusCode://500
 
 
 # 修改页面

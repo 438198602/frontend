@@ -115,17 +115,37 @@ input 的 H5 placeholder 属性，不能直接改文字颜色，所以目前的�
 Tips: 配合 opacity 属性使用效果更佳！
 
 ```
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: pink;
+input::input-placeholder {
+	color: #aaa;
 }
-::-moz-placeholder { /* Firefox 19+ */
-  color: pink;
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: #aaa;
 }
-:-ms-input-placeholder { /* IE 10+ */
-  color: pink;
+input:-moz-placeholder { /* Firefox 18- */
+	color: #aaa;
 }
-:-moz-placeholder { /* Firefox 18- */
-  color: pink;
+input::-moz-placeholder { /* Firefox 19+ */
+	color: #aaa;
+}
+input:-ms-input-placeholder { /* IE 10+ */
+	color: #aaa !important;
+}
+```
+
+### H5 IOS input问题
+1、键盘默认显示的换行，改为搜索（用form包裹，action 设为 return true）
+```
+<form action="javascript:return true;">
+    <input type="search" name="keywords" autofocus="autofocus" autocomplete="off" placeholder="" />
+</form>'
+```
+2、iOS 在input type=search中自带的搜索图标 去掉
+```
+input[type="search"] {
+    -webkit-appearance: none;
+} 
+input::-webkit-search-cancel-button {
+    display: none;
 }
 ```
 

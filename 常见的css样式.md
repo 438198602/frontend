@@ -119,16 +119,16 @@ input::input-placeholder {
 	color: #aaa;
 }
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	color: #aaa;
+    color: #aaa;
 }
 input:-moz-placeholder { /* Firefox 18- */
-	color: #aaa;
+    color: #aaa;
 }
 input::-moz-placeholder { /* Firefox 19+ */
-	color: #aaa;
+    color: #aaa;
 }
 input:-ms-input-placeholder { /* IE 10+ */
-	color: #aaa !important;
+    color: #aaa !important;
 }
 ```
 

@@ -26,6 +26,7 @@
 
 <body>
     <div>
+        <button onclick="share_mdn()">share_mdn</button>
         <button onclick="call()">通用分享</button>
         <button onclick="call('wechatFriend')">微信好友</button>
         <button onclick="call('wechatTimeline')">朋友圈</button>
@@ -41,6 +42,19 @@
     </script>
     <script type="text/javascript" src="https://fa-ge.github.io/NativeShare/NativeShare.js"></script>
     <script>
+        function share_mdn() {
+            try {
+                const share = {
+                    title: '分享标题',
+                    text: '分享内容',
+                    url: '分享链接',
+                };
+                navigator.share(share);
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        
         var nativeShare = new NativeShare()
         var shareData = {
             title: 'NativeShare',

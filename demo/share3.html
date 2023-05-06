@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta name="description" content="NativeShare 是一个整合了各大移动端浏览器调用原生分享的插件！！！" />
+        <title>NativeShare demo</title>
+        <style>
+            html,
+            body {
+                height: 100%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+            button {
+                padding: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <button onclick="call()">通用分享</button>
+        </div>
+
+        <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.0/vconsole.min.js"></script>
+        <script>
+            var vConsole = new window.VConsole();
+        </script>
+        <script>
+            var UA = navigator.userAgent,
+                isIpad = /(iPad).*OS\s([\d_]+)/.test(UA),
+                isIpod = /(iPod)(.*OS\s([\d_]+))?/.test(UA),
+                isIphone = !isIpad && /(iPhone\sOS)\s([\d_]+)/.test(UA),
+                isIos = isIpad || isIpod || isIphone,
+                isAndroid = /(Android);?[\s\/]+([\d.]+)?/.test(UA),
+                isWechat = /micromessenger/i.test(UA),
+                isQQ = /QQ\/([\d\.]+)/.test(UA),
+                isQZone = /Qzone\//.test(UA),
+                isQQMBrowser = /MQQBrowser/i.test(UA) && !isWechat && !isQQ,
+                isUCMBrowser = /UCBrowser/i.test(UA);
+
+            function QQMBrowserShare(shareData) {
+                browser.app.share({
+                    title: shareData.title,
+                    description: shareData.desc,
+                    url: shareData.link,
+                    img_url: shareData.icon,
+                    from: shareData.platform,
+                    to_app: shareData.source
+                });
+            }
+
+            function ucbrowserShare(shareData) {
+                if (ucbrowser.web_shareEX) {
+                    ucbrowser.web_shareEX(
+                        JSON.stringify({
+                            title: shareData.title,
+                            content: shareData.desc,
+                            sourceUrl: shareData.link,
+                            imageUrl: shareData.icon,
+                            target: shareData.platform,
+                            source: shareData.source
+                        })
+                    );
+                } else {
+                    ucbrowser.web_share(
+                        shareData.title,
+                        shareData.desc,
+                        shareData.link,
+                        shareData.platform,
+                        '',
+                        shareData.source,
+                        shareData.icon
+                    );
+                }
+            }
+
+            function navigatorShare(shareData) {
+                if (navigator.share) {
+                    var queryObj = {
+                        url: shareData.link,
+                        title: shareData.title,
+                        text: shareData.desc
+                    };
+                    navigator.share(queryObj).catch(() => {
+                        shareFail();
+                    });
+                }
+            }
+
+            function shareFail() {
+                alert('fail');
+            }
+
+            function shareInit(shareData) {
+                try {
+                    if (isUCMBrowser && isIos) {
+                        ucbrowserShare(shareData);
+                    } else if (isQQMBrowser && isIos) {
+                        if (browser && browser.app && browser.app.share) {
+                            QQMBrowserShare(shareData);
+                        } else {
+                            util.js('//jsapi.qq.com/get?api=app.share', function () {
+                                QQMBrowserShare(shareData);
+                            });
+                        }
+                    } else {
+                        if (navigator.share) {
+                            navigatorShare(shareData);
+                        } else {
+                            shareFail();
+                        }
+                    }
+                } catch (error) {
+                    shareFail();
+                }
+            }
+
+            var util = {
+                version: '1.0.0',
+                files: {
+                    js: []
+                },
+                js: function (_src, callback) {
+                    var that = this,
+                        _v = '',
+                        _script = document.createElement('script');
+                    if (_src.indexOf('?v=') != -1) {
+                        var arr = _src.split('?v=');
+                        _src = arr[0];
+                        _v = arr[1];
+                    }
+                    if (that.files.js.indexOf(_src) == -1) {
+                        _script.type = 'text/javascript';
+                        _script.src = _src + '?v=' + that.version + _v;
+                        document.getElementsByTagName('head')[0].appendChild(_script);
+                        if (!(/*@cc_on!@*/ 0)) {
+                            _script.onload = function () {
+                                callback();
+                            };
+                        } else {
+                            _script.onreadystatechange = function () {
+                                if (_script.readyState == 'loaded' || _script.readyState == 'complete') {
+                                    callback();
+                                }
+                            };
+                        }
+                        that.files.js.push(_src);
+                    }
+                }
+            };
+
+            function call() {
+                shareInit({
+                    title: 'H5 Share',
+                    desc: 'H5 Share插件',
+                    link: 'https://438198602.github.io/frontend/demo/share3.html',
+                    icon: 'https://pic3.zhimg.com/v2-080267af84aa0e97c66d5f12e311c3d6_xl.jpg'
+                });
+            }
+        </script>
+    </body>
+</html>

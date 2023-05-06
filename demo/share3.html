@@ -46,7 +46,9 @@
                 isUCMBrowser = /UCBrowser/i.test(UA);
 
             if (isQQMBrowser && isIos) {
-                util.js('//jsapi.qq.com/get?api=app.share');
+                util.js('//jsapi.qq.com/get?api=app.share', function() {
+                    console.log('---load---')
+                });
             }
 
             function QQMBrowserShare(shareData) {

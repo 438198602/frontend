@@ -45,6 +45,10 @@
                 isQQMBrowser = /MQQBrowser/i.test(UA) && !isWechat && !isQQ,
                 isUCMBrowser = /UCBrowser/i.test(UA);
 
+            if (isQQMBrowser && isIos) {
+                util.js('//jsapi.qq.com/get?api=app.share');
+            }
+
             function QQMBrowserShare(shareData) {
                 browser.app.share({
                     title: shareData.title,
@@ -88,7 +92,9 @@
                         title: shareData.title,
                         text: shareData.desc
                     };
-                    navigator.share(queryObj);
+                    navigator.share(queryObj).catch(() => {
+                        shareFail();
+                    });
                 }
             }
 
@@ -102,14 +108,12 @@
                         ucbrowserShare(shareData);
                     } else if (isQQMBrowser && isIos) {
                         if (browser && browser.app && browser.app.share) {
-                            console.log('000')
+                            console.log('000');
                             QQMBrowserShare(shareData);
                         } else {
                             util.js('//jsapi.qq.com/get?api=app.share', function () {
-                                setTimeout(function() {
-                                    console.log('111---', browser.app.share)
-                                    QQMBrowserShare(shareData);
-                                }, 1000);
+                                console.log('111---', browser.app.share);
+                                QQMBrowserShare(shareData);
                             });
                         }
                     } else {

@@ -45,10 +45,18 @@
                 isQQMBrowser = /MQQBrowser/i.test(UA) && !isWechat && !isQQ,
                 isUCMBrowser = /UCBrowser/i.test(UA);
 
+            function noop() {}
+            function loadJs(src, callback = noop) {
+                var ref = document.getElementsByTagName('script')[0],
+                    script = document.createElement('script');
+                script.src = src;
+                script.async = true;
+                ref.parentNode.insertBefore(script, ref);
+                script.onload = callback;
+            }
             if (isQQMBrowser && isIos) {
-                console.log('---load---000')
-                util.js('//jsapi.qq.com/get?api=app.share', function() {
-                    console.log('---load---')
+                loadJs('https://jsapi.qq.com/get?api=app.share', function() {
+                    console.log('load----')
                 });
             }
 
@@ -130,40 +138,6 @@
                     shareFail();
                 }
             }
-
-            var util = {
-                version: '1.0.0',
-                files: {
-                    js: []
-                },
-                js: function (_src, callback) {
-                    var that = this,
-                        _v = '',
-                        _script = document.createElement('script');
-                    if (_src.indexOf('?v=') != -1) {
-                        var arr = _src.split('?v=');
-                        _src = arr[0];
-                        _v = arr[1];
-                    }
-                    if (that.files.js.indexOf(_src) == -1) {
-                        _script.type = 'text/javascript';
-                        _script.src = _src + '?v=' + that.version + _v;
-                        document.getElementsByTagName('head')[0].appendChild(_script);
-                        if (!(/*@cc_on!@*/ 0)) {
-                            _script.onload = function () {
-                                callback();
-                            };
-                        } else {
-                            _script.onreadystatechange = function () {
-                                if (_script.readyState == 'loaded' || _script.readyState == 'complete') {
-                                    callback();
-                                }
-                            };
-                        }
-                        that.files.js.push(_src);
-                    }
-                }
-            };
 
             function call() {
                 shareInit({

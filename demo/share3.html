@@ -46,6 +46,7 @@
                 isUCMBrowser = /UCBrowser/i.test(UA);
 
             if (isQQMBrowser && isIos) {
+                console.log('---load---000')
                 util.js('//jsapi.qq.com/get?api=app.share', function() {
                     console.log('---load---')
                 });

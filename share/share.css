@@ -1,0 +1,54 @@
+.share-fail-dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1555;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.share-fail-dialog .dialog {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 6.24rem;
+    padding: .48rem 0;
+    border-radius: 0.08rem;
+    background: #fff;
+}
+.share-fail-dialog .dialog .icon_image {
+    width: 1.12rem;
+    height: 1.12rem;
+}
+.share-fail-dialog .dialog .main_text {
+    height: .5rem;
+    line-height: .5rem;
+    font-size: .36rem;
+    color: #111;
+    margin-top: .32rem;
+}
+.share-fail-dialog .dialog .extra_text {
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .28rem;
+    color: #999;
+    margin-top: .08rem;
+}
+.share-fail-dialog .dialog .confirm_button {
+    width: 4.94rem;
+    height: .72rem;
+    line-height: .72rem;
+    margin-top: .48rem;
+    font-size: .28rem;
+    color: #111;
+    text-align: center;
+    border-radius: .08rem;
+    background-color: #f8f8f8;
+}

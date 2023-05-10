@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>share demo</title>
+</head>
+<body>
+    <button onclick="share()">share</button>
+
+    <script src="./util.js"></script>
+    <script>
+        util.share.init();
+        function share() {
+            var shareData = {
+                title: 'title',
+                desc: 'desc',
+                icon: 'https://www.baidu.com/img/flexible/logo/pc/result.png',
+                link: window.location.href,
+                platform: undefined,
+                source: '百度'
+            };
+            util.share.tap(shareData);
+        }
+    </script>
+</body>
+</html>

@@ -6,7 +6,11 @@
 
 1、进入到模拟器目录
 
+Android
 `cd C:\Users\ycl\AppData\Local\Android\Sdk\emulator`
+
+Mac
+`cd /Users/mars/Library/Android/sdk/emulator`
 
 2、查看已安装模拟器列表
 
@@ -22,24 +26,41 @@
 
 1、先进入到SDK的platform-tools目录
 
+Android
 `cd C:\Users\ycl\AppData\Local\Android\Sdk\platform-tools`
+
+Mac
+`cd ~/Library/Android/sdk/platform-tools`
 
 2、root
 
+Android
 `adb root`
+
+Mac
+`./adb root`
 
 3、remount
 
+Android
 `adb remount`
 
-4、在D盘新建一个andriodhosts文件夹，将/system/etc/hosts里的hosts文件拉到此处
+Mac
+`./adb remount`
 
-`adb pull /system/etc/hosts d:/andriodhosts`
+4、将电脑的hosts文件push虚拟机
 
-5、修改后将hosts再push回虚拟机
+Android
+`adb push C:\Windows\System32\drivers\etc\hosts /system/etc/hosts`
 
-`adb push d:/andriodhosts/hosts /system/etc/hosts`
+Mac
+`./adb push /private/etc/hosts /system/etc/hosts`
 
-6、查看host文件是否修改成功
+5、查看host文件是否修改成功
 
+Android
 `adb shell cat /etc/hosts`
+
+Mac
+`./adb shell cat /etc/hosts`
+
